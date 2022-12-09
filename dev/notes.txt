@@ -1,9 +1,12 @@
 - x install Sass
-- .. turn nouns into flashcards
+- x turn nouns into flashcards
 	- x make component: TNoun
 	- x show how to switch between TypeScript and JavaScript component	
 	- x interfaces 
-	- .. restructure to
-		- front
-		- back
-	- implement interactivity with click on front to toggle back
+	- x restructure to
+		- x front
+		- x back
+	- x implement interactivity with click on front to toggle back
+- .. convert state solution to useContext
+
+- change types.ts to interfaces.ts
