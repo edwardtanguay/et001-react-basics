@@ -1,11 +1,13 @@
-import { Dispatch, SetStateAction, createContext, useState } from 'react';
+import { Dispatch, SetStateAction, createContext, useState, useEffect } from 'react';
 import { INoun } from './interfaces';
 import rawNouns from './data/nouns.json';
+import axios from 'axios';
 
 interface IAppContext {
 	nouns: INoun[];
 	setNouns: Dispatch<SetStateAction<INoun[]>>;
 	appTitle: string;
+	books: any[];
 }
 
 interface IAppProvider {
@@ -21,10 +23,19 @@ rawNouns.forEach((rawNoun) => {
 	_nouns.push(noun);
 });
 
+const booksUrl = 'https://edwardtanguay.vercel.app/share/techBooks.json'
+
 export const AppContext = createContext<IAppContext>({} as IAppContext);
 
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	const [nouns, setNouns] = useState(_nouns);
+	const [books, setBooks] = useState([]);
+	
+	useEffect(() => {
+		(async () => {
+			setBooks((await axios.get(booksUrl)).data);
+		})();
+	}, []);
 
 	const appTitle = 'German Learning Site';
 
@@ -33,7 +44,8 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 			value={{
 				nouns,
 				setNouns,
-				appTitle
+				appTitle,
+				books
 			}}
 		>
 			{children}
