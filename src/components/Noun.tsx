@@ -1,7 +1,7 @@
-import { TNoun } from '../types';
+import { INoun } from '../types';
 
-type Props = {
-	noun: TNoun;
+interface Props {
+	noun: INoun;
 }
 
 export const Noun = (props: Props) => {

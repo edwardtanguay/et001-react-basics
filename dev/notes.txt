@@ -1,6 +1,8 @@
 - x install Sass
 - .. turn nouns into flashcards
-	- .. make component: Noun
+	- x make component: TNoun
+	- x show how to switch between TypeScript and JavaScript component	
+	- .. interfaces 
 	- restructure to
 		- front
 		- back

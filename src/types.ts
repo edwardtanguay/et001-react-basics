@@ -1,4 +1,4 @@
-export type TNoun = {
+export type INoun = {
 	article: string;
 	singular: string;
 	plural: string;

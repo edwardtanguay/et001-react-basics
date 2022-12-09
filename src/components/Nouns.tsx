@@ -1,15 +1,15 @@
 import { Noun } from "./Noun";
-import { TNoun } from "../types";
+import { INoun } from "../types";
 
 type Props = {
-	nouns: TNoun[];
+	nouns: INoun[];
 };
 
 export const Nouns = (props: Props) => {
 	const { nouns } = props;
 	return (
 		<div className="nouns">
-			{nouns.map((noun: TNoun) => {
+			{nouns.map((noun: INoun) => {
 				return (
 					<Noun noun={noun} />	
 				);
