@@ -5,6 +5,7 @@ import rawNouns from './data/nouns.json';
 interface IAppContext {
 	nouns: INoun[];
 	setNouns: Dispatch<SetStateAction<INoun[]>>;
+	appTitle: string;
 }
 
 interface IAppProvider {
@@ -25,11 +26,14 @@ export const AppContext = createContext<IAppContext>({} as IAppContext);
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	const [nouns, setNouns] = useState(_nouns);
 
+	const appTitle = 'React Basics';
+
 	return (
 		<AppContext.Provider
 			value={{
 				nouns,
-				setNouns
+				setNouns,
+				appTitle
 			}}
 		>
 			{children}
