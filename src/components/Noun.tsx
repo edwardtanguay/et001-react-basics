@@ -1,11 +1,7 @@
-type Noun = {
-	article: string;
-	singular: string;
-	plural: string;
-};
+import { TNoun } from '../types';
 
 type Props = {
-	noun: Noun;
+	noun: TNoun;
 }
 
 export const Noun = (props: Props) => {
