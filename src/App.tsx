@@ -11,11 +11,9 @@ const App = () => {
 	return (
 		<div className="App">
 			<h1>{title}</h1>
-      <AppTitle />
-      {/* <AppTitle title="The French Nouns"/>
-      <AppTitle title="The Spanish Nouns"/> */}
+			<AppTitle />
 			<p>There are {nouns.length} nouns:</p>
-      <Nouns/>
+			<Nouns />
 		</div>
 	);
 };
