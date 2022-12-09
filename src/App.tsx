@@ -25,7 +25,7 @@ const App = () => {
       {/* <AppTitle title="The French Nouns"/>
       <AppTitle title="The Spanish Nouns"/> */}
 			<p>There are {nouns.length} nouns:</p>
-      <Nouns nouns={nouns} />
+      <Nouns nouns={nouns} setNouns={setNouns} />
 		</div>
 	);
 };
