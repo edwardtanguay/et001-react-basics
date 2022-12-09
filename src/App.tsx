@@ -1,19 +1,21 @@
+import { useState } from 'react';
 import './App.scss';
 import { AppTitle } from './components/AppTitle';
 import { Nouns } from './components/Nouns';
 import rawNouns from './data/nouns.json';
 import { INoun } from './types';
 
-const nouns:INoun[] = [];
+const _nouns:INoun[] = [];
 rawNouns.forEach(rawNoun => {
 	const noun: INoun = {
 		...rawNoun,
 		backIsShowing: false
 	};
-	nouns.push(noun);
+	_nouns.push(noun);
 })
 
 const App = () => {
+	const [nouns, setNouns] = useState(_nouns);
 	const title = 'The React Basics';
 
 	return (
