@@ -1,7 +1,17 @@
 import './App.scss';
 import { AppTitle } from './components/AppTitle';
 import { Nouns } from './components/Nouns';
-import nouns from './data/nouns.json';
+import rawNouns from './data/nouns.json';
+import { INoun } from './types';
+
+const nouns:INoun[] = [];
+rawNouns.forEach(rawNoun => {
+	const noun: INoun = {
+		...rawNoun,
+		backIsShowing: false
+	};
+	nouns.push(noun);
+})
 
 const App = () => {
 	const title = 'The React Basics';
