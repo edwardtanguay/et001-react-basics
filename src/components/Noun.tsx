@@ -12,7 +12,7 @@ export const Noun = (props: IProps) => {
 
 	const handleToggleFlashcard = (noun: INoun) => {
 		noun.backIsShowing = !noun.backIsShowing;
-		setNouns(nouns);
+		setNouns([...nouns]);
 	};
 
 	return (
