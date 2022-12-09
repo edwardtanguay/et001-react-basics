@@ -1,19 +1,14 @@
-import { Dispatch, SetStateAction } from 'react';
-import { Noun } from "./Noun";
-import { INoun } from "../types";
+import { useContext } from 'react';
+import { AppContext } from '../AppContext';
+import { Noun } from './Noun';
 
-interface IProps {
-	nouns: INoun[];
-	setNouns: Dispatch<SetStateAction<INoun[]>>;
-};
-
-export const Nouns = (props: IProps) => {
-	const { nouns, setNouns } = props;
+export const Nouns = () => {
+	const { nouns, setNouns } = useContext(AppContext);
 	return (
 		<div className="nouns">
-			{nouns.map((noun: INoun, index) => {
+			{nouns.map((noun, index) => {
 				return (
-					<Noun noun={noun} nouns={nouns} setNouns={setNouns} key={index} />	
+					<Noun noun={noun} key={index} />	
 				);
 			})}
 		</div>

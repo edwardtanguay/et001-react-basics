@@ -1,21 +1,11 @@
-import { useState } from 'react';
 import './App.scss';
 import { AppTitle } from './components/AppTitle';
 import { Nouns } from './components/Nouns';
-import rawNouns from './data/nouns.json';
-import { INoun } from './types';
-
-const _nouns:INoun[] = [];
-rawNouns.forEach(rawNoun => {
-	const noun: INoun = {
-		...rawNoun,
-		backIsShowing: false
-	};
-	_nouns.push(noun);
-})
+import { useContext } from 'react';
+import { AppContext } from './AppContext';
 
 const App = () => {
-	const [nouns, setNouns] = useState(_nouns);
+	const { nouns, setNouns } = useContext(AppContext);
 	const title = 'The React Basics';
 
 	return (
@@ -25,7 +15,7 @@ const App = () => {
       {/* <AppTitle title="The French Nouns"/>
       <AppTitle title="The Spanish Nouns"/> */}
 			<p>There are {nouns.length} nouns:</p>
-      <Nouns nouns={nouns} setNouns={setNouns} />
+      <Nouns/>
 		</div>
 	);
 };

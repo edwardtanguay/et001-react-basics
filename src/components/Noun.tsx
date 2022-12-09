@@ -1,14 +1,14 @@
-import { Dispatch, SetStateAction } from 'react';
 import { INoun } from '../types';
+import { useContext } from 'react';
+import { AppContext } from '../AppContext';
 
 interface IProps {
 	noun: INoun;
-	nouns: INoun[];
-	setNouns: Dispatch<SetStateAction<INoun[]>>;
 }
 
 export const Noun = (props: IProps) => {
-	const { noun, nouns, setNouns } = props;
+	const { nouns, setNouns } = useContext(AppContext);
+	const { noun} = props;
 
 	const handleToggleFlashcard = (noun: INoun) => {
 		noun.backIsShowing = !noun.backIsShowing;
