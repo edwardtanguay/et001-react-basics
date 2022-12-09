@@ -1,11 +1,11 @@
 import { Noun } from "./Noun";
 import { INoun } from "../types";
 
-type Props = {
+interface IProps {
 	nouns: INoun[];
 };
 
-export const Nouns = (props: Props) => {
+export const Nouns = (props: IProps) => {
 	const { nouns } = props;
 	return (
 		<div className="nouns">
