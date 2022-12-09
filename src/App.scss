@@ -17,10 +17,11 @@ body {
 			background-color: #222;
 			margin-bottom: 1rem;
 			padding: 1rem;
-			.line1 {
+			.front {
 				color:yellow;
+				margin-bottom: .5rem;
 			}
-			.line2 {
+			.back {
 				color: orange;
 			}
 		}

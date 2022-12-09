@@ -2,8 +2,8 @@
 - .. turn nouns into flashcards
 	- x make component: TNoun
 	- x show how to switch between TypeScript and JavaScript component	
-	- .. interfaces 
-	- restructure to
+	- x interfaces 
+	- .. restructure to
 		- front
 		- back
 	- implement interactivity with click on front to toggle back
