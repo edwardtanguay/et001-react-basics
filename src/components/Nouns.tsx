@@ -9,9 +9,9 @@ export const Nouns = (props: IProps) => {
 	const { nouns } = props;
 	return (
 		<div className="nouns">
-			{nouns.map((noun: INoun) => {
+			{nouns.map((noun: INoun, index) => {
 				return (
-					<Noun noun={noun} />	
+					<Noun noun={noun} key={index} />	
 				);
 			})}
 		</div>
