@@ -9,10 +9,9 @@ const App = () => {
 	return (
 		<div className="App">
 			<h1>{title}</h1>
-			<p>These are the basics.</p>
       <AppTitle />
-      <AppTitle title="The French Nouns"/>
-      <AppTitle title="The Spanish Nouns"/>
+      {/* <AppTitle title="The French Nouns"/>
+      <AppTitle title="The Spanish Nouns"/> */}
 			<p>There are {nouns.length} nouns:</p>
       <Nouns nouns={nouns} />
 		</div>

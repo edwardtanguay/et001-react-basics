@@ -1,1 +1,7 @@
-- .. install Sass
+- x install Sass
+- .. turn nouns into flashcards
+	- .. make component: Noun
+	- restructure to
+		- front
+		- back
+	- implement interactivity with click on front to toggle back
