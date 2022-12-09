@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, createContext, useState } from 'react';
-import { INoun } from './types';
+import { INoun } from './interfaces';
 import rawNouns from './data/nouns.json';
 
 interface IAppContext {

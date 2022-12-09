@@ -1,4 +1,4 @@
-import { INoun } from '../types';
+import { INoun } from '../interfaces';
 import { useContext } from 'react';
 import { AppContext } from '../AppContext';
 
@@ -8,7 +8,7 @@ interface IProps {
 
 export const Noun = (props: IProps) => {
 	const { nouns, setNouns } = useContext(AppContext);
-	const { noun} = props;
+	const { noun } = props;
 
 	const handleToggleFlashcard = (noun: INoun) => {
 		noun.backIsShowing = !noun.backIsShowing;

@@ -7,6 +7,6 @@
 		- x front
 		- x back
 	- x implement interactivity with click on front to toggle back
-- .. convert state solution to useContext
+- x convert state solution to useContext
 
 - change types.ts to interfaces.ts
