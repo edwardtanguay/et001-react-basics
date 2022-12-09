@@ -8,5 +8,6 @@
 		- x back
 	- x implement interactivity with click on front to toggle back
 - x convert state solution to useContext
-
-- change types.ts to interfaces.ts
+- x change types.ts to interfaces.ts
+- .. change to German Learning
+- get German tech books via API

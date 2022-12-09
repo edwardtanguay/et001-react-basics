@@ -26,7 +26,7 @@ export const AppContext = createContext<IAppContext>({} as IAppContext);
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	const [nouns, setNouns] = useState(_nouns);
 
-	const appTitle = 'React Basics';
+	const appTitle = 'German Learning Site';
 
 	return (
 		<AppContext.Provider

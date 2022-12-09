@@ -1,5 +1,5 @@
 import './App.scss';
-import { AppTitle } from './components/AppTitle';
+import { AppTitle } from './components/SectionTitle';
 import { Nouns } from './components/Nouns';
 import { useContext } from 'react';
 import { AppContext } from './AppContext';
